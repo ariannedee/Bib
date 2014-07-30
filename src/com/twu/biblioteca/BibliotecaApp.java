@@ -20,11 +20,18 @@ public class BibliotecaApp {
 
         out.println("List Books");
 
+        String userOption = "";
         try {
-            bufferedReader.readLine();
+            userOption = bufferedReader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        library.printBooks();
+
+        if ("List Books".equals(userOption)) {
+            library.printBooks();
+        } else {
+            out.println("Select a valid option!");
+        }
+
     }
 }
