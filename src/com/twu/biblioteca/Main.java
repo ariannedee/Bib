@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -13,7 +15,8 @@ public class Main {
         books.add(book2);
         books.add(book3);
         Library library = new Library(books, System.out);
-        BibliotecaApp biblioteca = new BibliotecaApp(library, System.out);
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BibliotecaApp biblioteca = new BibliotecaApp(library, System.out, bufferedReader);
         biblioteca.start();
     }
 }
